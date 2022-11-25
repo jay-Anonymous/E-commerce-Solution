@@ -30,9 +30,9 @@ export default {
 #app {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
- /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  */
+  
   color: #fff;
   overflow-x: hidden;
 }
