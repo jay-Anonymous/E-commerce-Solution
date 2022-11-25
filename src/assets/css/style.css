@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .header {
+    @apply flex justify-between items-center mb-6 sm:mb-10;
+  }
+}
+
+@layer components {
+  .base-button {
+    @apply font-semibold text-darkGrayishBlue hover:text-veryDarkGrayishBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlue-hover transition-all;
+  }
+
+  .base-card {
+    @apply px-4 py-3 sm:px-6 sm:py-5 bg-white dark:bg-veryDarkBlue-desaturated text-darkGrayishBlue dark:text-darkGrayishBlueDark shadow-lg;
+  }
+}
+
+.bg-image-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+@media screen and (min-width: 640px) {
+  .bg-image-container {
+    height: 300px;
+  }
+}
+
+input {
+  caret-color: var(--brightBlue);
+}
+
+input[type="checkbox"]:hover {
+  border-color: var(--brightBlue);
+}
+
+input[type="checkbox"]:checked::before {
+  content: url("../img/icon-check.svg");
+  position: absolute;
+  display: none;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+input[type="checkbox"]:checked::before {
+  display: block;
+}
+
+.controls-button-list {
+  @apply font-semibold justify-evenly sm:justify-between bg-white shadow-xl dark:bg-veryDarkBlue-desaturated text-darkGrayishBlue dark:text-lightGrayishBlue;
+  padding: 20px 40px;
+  border-radius: 0.375rem; /* 6px */
+}
+
+@media screen and (min-width: 640px) {
+  input[type="checkbox"]:checked::before {
+    top: 0;
+  }
+
+  .controls-button-list {
+    @apply shadow-none;
+
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+:root {
+  --brightBlue: hsl(220, 98%, 61%);
+
+  /* Light Theme */
+  --veryLightGray: hsl(0, 0%, 98%);
+  --veryLightGrayishBlue: hsl(236, 33%, 92%);
+  --lightGrayishBlue: hsl(233, 11%, 84%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  /* Dark Theme */
+  --veryDarkBlueDark: hsl(235, 21%, 11%);
+  --veryDarkDesaturatedBlueDark: hsl(235, 24%, 19%);
+  --lightGrayishBlueDark: hsl(234, 39%, 85%);
+  --lightGrayishBlueHoverDark: hsl(236, 33%, 92%);
+  --darkGrayishBlueDark: hsl(234, 11%, 52%);
+  --veryDarkGrayishBlueDark: hsl(233, 14%, 35%);
+  --veryDarkGrayishBlueHoverDark: hsl(237, 14%, 26%);
+}
