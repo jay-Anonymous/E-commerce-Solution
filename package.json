@@ -12,7 +12,7 @@
     "@heroicons/vue": "^2.0.12",
     "@vueuse/core": "^9.4.0",
     "core-js": "^3.8.3",
-    "pinia": "^2.0.23",
+    "pinia": "^2.1.7",
     "vue": "^3.2.13",
     "vuedraggable": "^4.1.0"
   },
